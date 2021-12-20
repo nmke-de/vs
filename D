@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+from random import choice
+from sys import argv
+try:
+	ub = int(argv[1])+1
+except:
+	quit()
+if ub-1 < 1:
+	quit("Not a die")
+print (choice(range(1,ub)))
