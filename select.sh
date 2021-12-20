@@ -7,5 +7,5 @@ get_data () {
 }
 
 lines=$(D $(get_data elb.tsv | wc -l | cut -d' ' -f1))
-get_data elb.tsv | awk "BEGIN{FS=\"\\t\"} $(D $lines)==NR{print \$1 \" \" \$4 \":\" \$5 \"\\t\" \$6}"
+get_data elb.tsv | awk "BEGIN{FS=\"\\t\"; r=int(rand()*$lines)+1} r==NR{print \$1 \" \" \$4 \":\" \$5 \"\\t\" \$6}"
 
