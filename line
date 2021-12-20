@@ -1,0 +1,36 @@
+#!/usr/bin/awk -E
+
+function show_help(){
+	print "Syntax: line <line-numbers> [from <filename>]"
+	exit
+}
+
+BEGIN{
+	read_fn = 0
+	if (ARGC == 1)
+		show_help()
+	for (i = 1;i<=ARGC;i++){
+		if (ARGV[i] == "from" && read_fn == 0){
+			read_fn = 1
+			ARGV[i] = ""
+		}else if (read_fn == 1){
+			read_fn = 0
+			continue
+		}else if (ARGV[i] == "--help" || ARGV[i] == "-h"){
+			show_help()
+		}else if (ARGV[i] ~ /[:digit:]+?-[:digit:]+?/){
+			split(ARGV[i],pair,"-")
+			for (j = pair[1];j<=pair[2];j++){
+				lineno[j] = j
+			}
+			ARGV[i] = ""
+		}else{
+			lineno[ARGV[i]] = ARGV[i]
+			ARGV [i] = ""
+		}
+	}
+}
+
+NR in lineno {print}
+
+END{exit}
