@@ -6,8 +6,5 @@ get_data () {
 	sed '1,/^#EOF$/d' < "$SELF" | tar xz -O "$1"
 }
 
-line $(D $(wc -l elb.tsv | cut -d' ' -f1)) from elb.tsv | awk 'BEGIN{FS="\t"}{print $1 " " $4 ":" $5 "\t" $6}'
-
-exit 0
-#EOF
+get_data elb.tsv | line $(D $(get_data elb.tsv | wc -l | cut -d' ' -f1)) | awk 'BEGIN{FS="\t"}{print $1 " " $4 ":" $5 "\t" $6}'
 
