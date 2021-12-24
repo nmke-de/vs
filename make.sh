@@ -7,13 +7,16 @@ get_data () {
 }
 
 infile=""
-outfile=""
+outfile="vs"
 ap_state="normal"
 while [ $# -gt 0 ]; do
-	[ $ap_state = "get_outfile" ] && outfile=$1 && ap_state="normal" && continue
-	[ $1 = "-o" ] && [$ap_state = "normal" ] && ap_state="get_outfile" && continue
-	[ $1 = "-h" ] && echo "Syntax: $0 [-h|-o Outputfile] Inputfile" && exit 0
+	echo $1
+	[ $ap_state = "get_outfile" ] && outfile=$1 && ap_state="normal"
+	[ $1 = "-o" ] && [$ap_state = "normal" ] && ap_state="get_outfile"
+	[ $1 = "-h" ] && echo "Syntax: $0 [--help|-h|-o Outputfile] Inputfile" && exit 0
 	[ $1 = "--help" ] && echo "Syntax: $0 [--help|-h|-o Outputfile] Inputfile" && exit 0
+	[ $1 != "-o" ]  && [ $ap_state = "normal" ] && infile=$1
+	shift
 done
 
 test -z $infile && echo "No input file." >> /dev/stderr && exit 1
