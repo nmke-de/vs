@@ -6,6 +6,6 @@ get_data () {
 	sed '1,/^#EOF$/d' < "$SELF" | tar xz -O "$1"
 }
 
-lines=$(D $(get_data elb.tsv | wc -l | cut -d' ' -f1))
+#lines=$(D $(get_data elb.tsv | wc -l | cut -d' ' -f1))
 get_data elb.tsv | awk "BEGIN{FS=\"\\t\"; r=int(rand()*$lines)+1} r==NR{print \$1 \" \" \$4 \":\" \$5 \"\\t\" \$6}"
 
