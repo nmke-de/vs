@@ -22,7 +22,7 @@ done
 test -z $infile && echo "No input file." >> /dev/stderr && exit 1
 
 echo "Using $infile to make Verse/Selector $outfile..." >> /dev/stderr
-get_data select.sh > $outfile
+get_data select.sh  | sed "s/elb.tsv/$infile/g" > $outfile
 echo 'exit 0' >> $outfile
 echo '#EOF' >> $outfile
 tar cz $infile >> $outfile
