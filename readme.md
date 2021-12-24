@@ -41,7 +41,7 @@ You might want something else than the German Elberfelder Bibel. The file to use
 5. verse number,
 6. verse content
 
-in each line, tab-separated. If you use anthing comparable in scale to a bible, I advise you to use a script to generate the file.
+in each line, tab-separated. If you use anthing comparable in scale to a bible, for example a bible, I advise you to use a script to generate the file.
 
 Then, proceed with the following steps:
 
