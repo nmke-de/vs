@@ -54,14 +54,21 @@ Then, proceed with the following steps:
 
 ## Usage
 
+### gen
+
 ```
-vs --help
+gen --help
 
 	or:
 
-vs -h
+gen -h
 	or:
 
-vs [-o <Outputfile>] <Inputfile>
+gen [-o <Outputfile>] <Inputfile>
 ``` 
 
+### vs
+
+```
+vs
+```
