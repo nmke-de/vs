@@ -1,10 +1,10 @@
 # Verse/Selector
 
-Select a bible verse (or something similar) at random!
+Select a bible verse (or something similar) at random! This code uses the German Elberfelder Bibel from 1905.
 
 ## Why would I want this?
 
-I don't know. Perhaps to have something to greet you when you log in to your shell?
+Be greeted with a Bible verse when you log in to your shell. 
 
 ## Dependencies
 
