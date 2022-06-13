@@ -52,7 +52,7 @@ Then, proceed with the following steps:
 5. Do this: `./gen yourcustomfile.tsv`, but replace `yourcustomfile.tsv` with the name of your custom `.tsv`-file.
 6. Put your executable wherever you want. `mv vs /path/to/wherever/you/want`
 
-To create a tsv file with the correct format, I added a python helper script to help with the conversion from bibles of the [Zefanja project](https://sourceforge.net/projects/zefanja-sharp/files/Bibles) to the needed format.
+To create a tsv file with the correct format, I added a python helper script to help with the conversion from bibles of the [Zefanja project](https://sourceforge.net/projects/zefania-sharp/files/Bibles) to the needed format.
 
 ## Usage
 
