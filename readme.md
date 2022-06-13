@@ -11,7 +11,7 @@ Be greeted with a Bible verse when you log in to your shell.
 - sh (i.e. bash
 - awk (i.e. gawk)
 - make (i.e. gmake)
-- tar
+- tar (i.e. GNU tar)
 - sed
 - wc
 - cat (usually included in your shell)
