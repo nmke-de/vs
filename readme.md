@@ -85,3 +85,7 @@ where `path/to/your/vs` is the path to your compiled file.
 
 If you use bash, your profile file is `~/.bashrc`. Its zsh equivalent is `~/.config/zshrc`. On other shells, your profile file is usually `~/.profile`.
 
+### This did not work!
+
+Open an issue on this repository.
+
