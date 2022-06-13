@@ -72,3 +72,16 @@ gen [-o <Outputfile>] <Inputfile>
 ```
 vs
 ```
+
+## But I am not greeted by a bible verse when I log in to my shell!!!
+
+To be greeted by a bible verse on login, you need to write the following line in to your profile file:
+
+```
+path/to/your/vs
+```
+
+where `path/to/your/vs` is the path to your compiled file. 
+
+If you use bash, your profile file is `~/.bashrc`. Its zsh equivalent is `~/.config/zshrc`. On other shells, your profile file is usually `~/.profile`.
+
