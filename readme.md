@@ -52,7 +52,11 @@ Then, proceed with the following steps:
 5. Do this: `./gen yourcustomfile.tsv`, but replace `yourcustomfile.tsv` with the name of your custom `.tsv`-file.
 6. Put your executable wherever you want. `mv vs /path/to/wherever/you/want`
 
+### Generating that custom `.tsv`
+
 To create a tsv file with the correct format, I added a python helper script to help with the conversion from bibles of the [Zefanja project](https://sourceforge.net/projects/zefania-sharp/files/Bibles) to the needed format.
+
+Download the XML-file from the provided link that corresponds to the bible you wish to use and move it to the directory where your helper script is located. Then type `python3 zef2tsv.py [your-xml-file] > [your-bible].tsv`, but replace `[your-xml-file]` and `[your-bible]` with the real name of the XML-file and the name of your bible translation.
 
 ## Usage
 
